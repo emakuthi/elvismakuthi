@@ -1,6 +1,6 @@
 FROM nginx:alpine
 COPY . /usr/share/nginx/html
-EXPOSE 6129
+EXPOSE 80 6129
 
 
 
