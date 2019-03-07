@@ -19,7 +19,7 @@ sh "docker build -t elvismakuthi:version1 ."
 stage('Docker login to hub and push the image')
 {
 sh "docker login -u 'emakuthi' -p 'Baraka2013' "
-sh "docker tag elvismakuthi:latest emakuthi/elvimakuthi:version1"
+sh "docker tag elvismakuthi:version1 emakuthi/elvimakuthi:version1"
 sh "docker push emakuthi/elvismakuthi:version1"
 }
 
