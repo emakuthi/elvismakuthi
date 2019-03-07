@@ -1,3 +1,6 @@
-FROM elvismakuthi
-COPY . C:\Users\emakuthi\Desktop\Exam Practical
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
 EXPOSE 6129
+
+
+
