@@ -21,8 +21,13 @@ stage('Docker login to hub and push the image')
 sh "docker login -u 'emakuthi' -p 'Baraka2013' "
 sh "docker tag elvismakuthi:version1 emakuthi/elvismakuthi:version1"
 sh "docker push emakuthi/elvismakuthi:version1"
-}
 
+}
+stage('Deploy')
+  {
+ sh "docker run -d -p 6129:6129/tcp elvismakuthi:version1"
+       
+  }
 stage('Apply changes to the environment') {
 sh "ls -l"
 }
